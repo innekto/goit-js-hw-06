@@ -19,10 +19,9 @@ const boxesEl = document.querySelector('#boxes');
 
 inputEl.addEventListener('input', onInput);
 createBtnEl.addEventListener('click', createBoxes);
-// destroyBtnEl.addEventListener('click', destroyBoxes);
+destroyBtnEl.addEventListener('click', destroyBoxes);
 
 function onInput() {
-  // console.log(inputEl.value);
   return inputEl.value;
  };
 
@@ -47,11 +46,18 @@ function createBoxes(amount) {
   };
 
 
-// function destroyBoxes() {
-//   const box = document.querySelectorAll('.box');
-//   console.log(box);
+function destroyBoxes() {
+  const childrens = boxesEl.children;
+  // console.log(childrens)
   
-// }
+  for (let i = 0; i < childrens.length; i += 1){
+    console.log(childrens[i].classList);
+    if (childrens[i].classList.contains('box')) {
+      
+     
+      childrens[i].remove();
+    }
+  };
+};
 
 
-// destroyBoxes()
