@@ -1,3 +1,7 @@
+        // НЕ ДОРОБЛЕНО !!!
+
+
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
@@ -63,11 +67,11 @@ function createBoxes(amount) {
 };
 
 
-function destroyBoxes() {
-  const box = document.querySelectorAll('.box');
-  console.log(box);
+// function destroyBoxes() {
+//   const box = document.querySelectorAll('.box');
+//   console.log(box);
   
-}
+// }
 
 
 destroyBoxes()
