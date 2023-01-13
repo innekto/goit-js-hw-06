@@ -49,15 +49,13 @@ function createBoxes(amount) {
 function destroyBoxes() {
   const childrens = boxesEl.children;
   // console.log(childrens)
-  
   for (let i = 0; i < childrens.length; i += 1){
-    console.log(childrens[i].classList);
+    // console.log(childrens[i].classList);
     if (childrens[i].classList.contains('box')) {
-      
-     
-      childrens[i].remove();
+       boxesEl.innerHTML='';
     }
   };
+  
 };
 
 
