@@ -32,6 +32,7 @@ function widtAndHeightUp(index) {
 
 
 function createBoxes(amount) {
+  const elems = [];
   amount = onInput();
   for (let i = 0; i < amount; i += 1) {
     const el = document.createElement('div');
@@ -39,9 +40,9 @@ function createBoxes(amount) {
     el.style.backgroundColor = getRandomHexColor();
     el.style.width = widtAndHeightUp(i);
     el.style.height = widtAndHeightUp(i);
-    boxesEl.append(el);
+    elems.push(el);
 }
-  
+  boxesEl.append(...elems);
   return boxesEl;
   };
 
